@@ -3,13 +3,27 @@
 // *********************************************************************************
 
 var mysql = require('mysql');
-var connection = mysql.createConnection({
-    port: 3306,
-    host: 'l9dwvv6j64hlhpul.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-    user: 'gre4cw0zkhid3rbm',
-    password: "ssf61qhs4bd2nse3",
-    database: "StarWarsDeploy"
-});
+
+var source = {
+
+    localhost: {
+        port: 3306,
+        host: 'localhost',
+        user: 'root',
+        password: "",
+        database: "starwars"
+    },
+
+    jawsDB: {
+        port: 3306,
+        host: 'l9dwvv6j64hlhpul.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+        user: 'gre4cw0zkhid3rbm',
+        password: "ssf61qhs4bd2nse3",
+        database: "StarWarsDeploy" 
+    }
+}
+
+var connection = mysql.createConnection(source.jawsDB);
 
 
 connection.connect(function(err) {
