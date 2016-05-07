@@ -3,8 +3,8 @@ This file is intended to help developers get their SQL Databases setup correctly
 It is important since other developers will be unlikely to have the same database or tables setup already. 
 */
 
-CREATE DATABASE  `starwars`;
-USE `starwars`;
+CREATE DATABASE  `StarWarsDeploy`;
+USE `StarWarsDeploy`;
 
 CREATE TABLE `allcharacters` (
 	`id` Int( 11 ) AUTO_INCREMENT NOT NULL,
