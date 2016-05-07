@@ -23,7 +23,7 @@ var source = {
     }
 }
 
-var connection = mysql.createConnection(source.localhost);
+var connection = mysql.createConnection(source.jawsDB);
 
 
 connection.connect(function(err) {
